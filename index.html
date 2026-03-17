@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Ana Beatriz Nogueira | Tricologia e Medicina Estética</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="Dra. Ana Beatriz Nogueira - CRM 33.112. Especialista em Tricologia Médica e Medicina Estética em Toledo-PR. Tratamentos para queda de cabelo, pele e rejuvenescimento.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            cream: '#FAF9F6',
+                            nude: '#FDF7F5',
+                            main: '#B89488',
+                            charcoal: '#333333',
+                            sand: '#F5F5DC',
+                        }
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(250, 249, 246, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .premium-shadow {
+            box-shadow: 0 10px 40px -10px rgba(184, 148, 136, 0.2);
+        }
+        
+        .premium-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .premium-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(184, 148, 136, 0.25);
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .cta-glow {
+            box-shadow: 0 0 20px rgba(184, 148, 136, 0.4);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #FAF9F6 0%, #F5EAE7 100%);
+        }
+    </style>
+</head>
+<body class="bg-premium-cream font-montserrat text-premium-charcoal leading-relaxed">
+
+    <!-- Header / Nav -->
+    <header class="fixed w-full top-0 z-50 glass-nav border-b border-premium-main/10 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="images/Logo_PNG_SEMFUNDO_03.png" alt="Dra. Ana Beatriz Nogueira" class="h-10 md:h-14 w-auto object-contain">
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em] text-premium-charcoal/80">
+                <a href="#hero" class="hover:text-premium-main transition-colors">Início</a>
+                <a href="#servicos" class="hover:text-premium-main transition-colors">Especialidades</a>
+                <a href="#sobre" class="hover:text-premium-main transition-colors">A Doutora</a>
+                <a href="#depoimentos" class="hover:text-premium-main transition-colors">Depoimentos</a>
+                <a href="#faq" class="hover:text-premium-main transition-colors">FAQ</a>
+                <a href="https://wa.me/5545991855858" target="_blank" class="bg-premium-main text-white px-8 py-3.5 rounded-full hover:bg-premium-charcoal hover:scale-105 transition-all duration-300 shadow-lg shadow-premium-main/20">Agendar Agora</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-open" class="lg:hidden text-premium-main p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-premium-charcoal/90 backdrop-blur-md translate-x-full transition-transform duration-500 lg:hidden text-white">
+        <div class="flex flex-col h-full p-10">
+            <div class="flex justify-between items-center mb-16">
+                <img src="images/Logo_PNG_SEMFUNDO_03.png" alt="Logo" class="h-10 brightness-0 invert">
+                <button id="menu-close" class="text-premium-main p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col gap-8 text-2xl font-playfair italic">
+                <a href="#hero" class="mobile-link">Início</a>
+                <a href="#servicos" class="mobile-link">Especialidades</a>
+                <a href="#sobre" class="mobile-link">A Doutora</a>
+                <a href="#depoimentos" class="mobile-link">Depoimentos</a>
+                <a href="#faq" class="mobile-link">FAQ</a>
+            </div>
+            <div class="mt-auto">
+                <a href="https://wa.me/5545991855858" target="_blank" class="block bg-premium-main text-white text-center py-5 rounded-full font-bold text-lg shadow-xl shadow-premium-main/20">Agendar Consulta</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center pt-24 pb-12 hero-bg relative overflow-hidden">
+        <!-- Decoration side element -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-premium-main/5 -skew-x-12 translate-x-1/2 pointer-events-none"></div>
+        
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+            <!-- Content -->
+            <div class="space-y-10 animate-fade-in text-center md:text-left">
+                <div class="inline-flex items-center gap-3 px-5 py-2 bg-white/50 border border-premium-main/20 rounded-full">
+                    <span class="w-2 h-2 bg-premium-main rounded-full animate-pulse"></span>
+                    <span class="text-premium-main text-[10px] font-bold tracking-[0.3em] uppercase">Dra. Ana Beatriz | CRM 33.112</span>
+                </div>
+                
+                <h1 class="font-playfair text-5xl lg:text-8xl leading-[1.1] text-premium-charcoal font-medium">
+                    Eu estou aqui para cuidar da sua <span class="italic text-premium-main">autoestima.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-premium-charcoal/60 max-w-xl leading-relaxed mx-auto md:mx-0">
+                    Olá, eu sou a Dra. Ana Beatriz. Meu propósito é te ajudar a recuperar sua confiança através de tratamentos médicos personalizados, com todo o acolhimento que você merece.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-6 justify-center md:justify-start pt-4">
+                    <a href="https://wa.me/5545991855858" target="_blank" class="w-full sm:w-auto px-12 py-5 bg-premium-main text-white rounded-full font-bold text-lg hover:bg-premium-charcoal transition-all duration-500 shadow-2xl shadow-premium-main/30 flex items-center justify-center gap-3 group cta-glow">
+                        Quero agendar meu cuidado
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-2 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Area -->
+            <div class="relative group">
+                <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02] lg:max-w-[70%] lg:mx-auto">
+                    <img src="images/ana-banner.jpg" alt="Dra. Ana Beatriz Sorrindo" class="w-full h-auto object-cover">
+                </div>
+                <!-- Abstract floating circle -->
+                <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-premium-main/10 rounded-full blur-3xl -z-10"></div>
+                <div class="absolute top-1/2 -left-20 w-80 h-80 bg-premium-main/5 rounded-full blur-[100px] -z-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto / Diferenciais -->
+    <section class="py-32 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-24 space-y-6">
+                <span class="text-premium-main font-bold tracking-[0.4em] uppercase text-[10px]">Minha Promessa para Você</span>
+                <h2 class="font-playfair text-4xl md:text-6xl text-premium-charcoal leading-tight">Um olhar que vai além do consultório.</h2>
+                <div class="w-24 h-1 bg-premium-main/30 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
+                <div class="space-y-8 group">
+                    <div class="w-20 h-20 bg-premium-nude rounded-2xl flex items-center justify-center text-premium-main transition-all duration-500 group-hover:bg-premium-main group-hover:text-white group-hover:rotate-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-playfair text-3xl text-premium-charcoal">Você é ouvida e acolhida</h3>
+                        <p class="text-premium-charcoal/50 text-lg leading-relaxed">Meu atendimento é humano. Faço questão de parar, ouvir sua história e te acolher com todo o respeito que sua busca merece.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-8 group">
+                    <div class="w-20 h-20 bg-premium-nude rounded-2xl flex items-center justify-center text-premium-main transition-all duration-500 group-hover:bg-premium-main group-hover:text-white group-hover:rotate-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-playfair text-3xl text-premium-charcoal">Tempo de qualidade</h3>
+                        <p class="text-premium-charcoal/50 text-lg leading-relaxed">Aqui não existe pressa. Reservamos o tempo necessário para tirar todas as suas dúvidas e planejar seu tratamento com calma.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-8 group">
+                    <div class="w-20 h-20 bg-premium-nude rounded-2xl flex items-center justify-center text-premium-main transition-all duration-500 group-hover:bg-premium-main group-hover:text-white group-hover:rotate-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-playfair text-3xl text-premium-charcoal">Sua segurança em 1º lugar</h3>
+                        <p class="text-premium-charcoal/50 text-lg leading-relaxed">Uso as técnicas mais modernas e seguras da medicina para garantir que seus resultados sejam naturais e duradouros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialidades -->
+    <section id="servicos" class="py-32 bg-premium-cream">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 text-center md:text-left">
+                <div class="max-w-2xl space-y-4 mx-auto md:mx-0">
+                    <span class="text-premium-main font-bold tracking-[0.4em] uppercase text-[10px]">Cuidado Especializado</span>
+                    <h2 class="font-playfair text-4xl md:text-6xl text-premium-charcoal leading-tight">O que posso fazer <span class="text-premium-main">por você?</span></h2>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Tricologia -->
+                <div class="bg-white p-12 rounded-[3.5rem] premium-hover premium-shadow border border-premium-main/5 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 text-premium-main/10 font-playfair text-8xl italic select-none">01</div>
+                    <div class="space-y-8 relative z-10">
+                        <div class="text-premium-main">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-playfair text-3xl">Tricologia Médica</h3>
+                        <p class="text-premium-charcoal/60 leading-relaxed text-lg">Eu ajudo a identificar e tratar as causas da queda de cabelo e problemas do couro cabeludo.</p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span class="px-3 py-1 bg-premium-nude text-premium-main text-[10px] font-bold rounded-full uppercase tracking-wider">Queda Capilar</span>
+                            <span class="px-3 py-1 bg-premium-nude text-premium-main text-[10px] font-bold rounded-full uppercase tracking-wider">Couro Cabeludo</span>
+                            <span class="px-3 py-1 bg-premium-nude text-premium-main text-[10px] font-bold rounded-full uppercase tracking-wider">Alopécia</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Estética -->
+                <div class="bg-premium-charcoal p-12 rounded-[3.5rem] premium-hover shadow-2xl relative overflow-hidden text-white">
+                    <div class="absolute top-0 right-0 p-8 text-white/5 font-playfair text-8xl italic select-none">02</div>
+                    <div class="space-y-8 relative z-10">
+                        <div class="text-premium-main">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-playfair text-3xl">Beleza e Rejuvenescimento</h3>
+                        <p class="text-white/60 leading-relaxed text-lg">Realizo procedimentos estéticos que realçam sua beleza natural sem mudar quem você é.</p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span class="px-3 py-1 bg-white/10 text-premium-main text-[10px] font-bold rounded-full uppercase tracking-wider">Toxina Botulínica</span>
+                            <span class="px-3 py-1 bg-white/10 text-premium-main text-[10px] font-bold rounded-full uppercase tracking-wider">Bioestimuladores</span>
+                            <span class="px-3 py-1 bg-white/10 text-premium-main text-[10px] font-bold rounded-full uppercase tracking-wider">Preenchimento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pele -->
+                <div class="bg-white p-12 rounded-[3.5rem] premium-hover premium-shadow border border-premium-main/5 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 text-premium-main/10 font-playfair text-8xl italic select-none">03</div>
+                    <div class="space-y-8 relative z-10">
+                        <div class="text-premium-main">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-playfair text-3xl">Saúde da sua Pele</h3>
+                        <p class="text-premium-charcoal/60 leading-relaxed text-lg">Trato desde acne e manchas até melasma, focando sempre na saúde e vitalidade da sua pele.</p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span class="px-3 py-1 bg-premium-nude text-premium-main text-[10px] font-bold rounded-full uppercase tracking-wider">Acne</span>
+                            <span class="px-3 py-1 bg-premium-nude text-premium-main text-[10px] font-bold rounded-full uppercase tracking-wider">Melasma</span>
+                            <span class="px-3 py-1 bg-premium-nude text-premium-main text-[10px] font-bold rounded-full uppercase tracking-wider">Manchas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="py-32 bg-white flex flex-col items-center">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="w-full lg:w-1/2 relative group">
+                    <div class="relative z-10 rounded-[4rem] overflow-hidden shadow-2xl border-[15px] border-premium-cream lg:max-w-[70%] lg:mx-auto">
+                        <img src="images/ana-sobre.jpg" alt="Dra. Ana Beatriz atendo paciente" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-premium-main/10 rounded-full -z-10 group-hover:scale-110 transition-transform duration-700"></div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 space-y-10">
+                    <div class="space-y-4">
+                        <span class="text-premium-main font-bold tracking-[0.4em] uppercase text-[10px]">Prazer, sou a Dra. Ana</span>
+                        <h2 class="font-playfair text-5xl md:text-7xl leading-tight">Meu desejo é que você se sinta <span class="italic text-premium-main">bem.</span></h2>
+                    </div>
+                    
+                    <div class="space-y-6 text-premium-charcoal/70 text-lg leading-relaxed max-w-xl">
+                        <p>Quero te contar que meu trabalho é pautado no atendimento <span class="text-premium-main font-bold italic">humanizado</span>. Para mim, cuidar de você vai muito além de tratar sintomas: é entender a sua história.</p>
+                        
+                        <p>Acredito que unir ciência e sensibilidade é o único caminho para oferecer um cuidado integral. Na minha prática como médica especializada em <span class="text-premium-main font-bold uppercase tracking-widest text-xs">Tricologia e Estética</span>, cada protocolo é desenhado exclusivamente para o que você precisa.</p>
+                        
+                        <p>Espero te ver em breve para iniciarmos essa jornada de autocuidado e confiança.</p>
+                    </div>
+                    
+                    <div class="pt-6">
+                        <a href="https://wa.me/5545991855858" target="_blank" class="inline-flex items-center gap-4 text-premium-main font-bold text-xl hover:gap-8 transition-all duration-300">
+                            Falar comigo agora
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-32 bg-premium-cream">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="font-playfair text-4xl md:text-6xl text-premium-charcoal">Vozes de quem <span class="italic text-premium-main">confiou.</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-12 rounded-[3.5rem] premium-shadow border border-premium-main/5">
+                    <div class="flex gap-1 text-premium-main mb-8">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                    <p class="text-premium-charcoal/70 text-lg italic leading-relaxed mb-10">"A Dra. Ana Beatriz me acolheu tão bem... Foi muito simpática e atenciosa em cada detalhe. Eu recomendo muito!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-premium-nude rounded-full flex items-center justify-center text-premium-main font-bold">MF</div>
+                        <div>
+                            <p class="font-bold text-premium-charcoal">Maria F.</p>
+                            <p class="text-xs text-premium-main font-bold tracking-widest uppercase">São Paulo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-12 rounded-[3.5rem] premium-shadow border border-premium-main/5">
+                    <div class="flex gap-1 text-premium-main mb-8">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                    <p class="text-premium-charcoal/70 text-lg italic leading-relaxed mb-10">"O tratamento para queda de cabelo funcionou perfeitamente. Estou muito satisfeito com os resultados!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-premium-nude rounded-full flex items-center justify-center text-premium-main font-bold">JS</div>
+                        <div>
+                            <p class="font-bold text-premium-charcoal">João Silva</p>
+                            <p class="text-xs text-premium-main font-bold tracking-widest uppercase">Toledo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-12 rounded-[3.5rem] premium-shadow border border-premium-main/5">
+                    <div class="flex gap-1 text-premium-main mb-8">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.571.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                    <p class="text-premium-charcoal/70 text-lg italic leading-relaxed mb-10">"Consultório impecável e atendimento humanizado. A Dra. explica tudo com muita clareza."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-premium-nude rounded-full flex items-center justify-center text-premium-main font-bold">AC</div>
+                        <div>
+                            <p class="font-bold text-premium-charcoal">Ana Costa</p>
+                            <p class="text-xs text-premium-main font-bold tracking-widest uppercase">Curitiba</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="font-playfair text-4xl md:text-6xl text-center mb-20">Suas dúvidas</h2>
+            <div class="space-y-6">
+                <details class="group bg-premium-cream rounded-[2rem] overflow-hidden premium-shadow transition-all duration-300">
+                    <summary class="p-8 cursor-pointer flex justify-between items-center list-none group-open:bg-premium-main/5">
+                        <span class="font-bold text-premium-charcoal text-lg">Qual é a duração da nossa consulta?</span>
+                        <div class="text-premium-main group-open:rotate-180 transition-transform bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </div>
+                    </summary>
+                    <div class="p-8 pt-2 text-premium-charcoal/60 leading-relaxed text-lg">
+                        Nossa consulta dura em média de 40 a 60 minutos. Faço questão deste tempo para realizarmos uma avaliação bem profunda do seu histórico e necessidades.
+                    </div>
+                </details>
+                
+                <details class="group bg-premium-cream rounded-[2rem] overflow-hidden premium-shadow transition-all duration-300">
+                    <summary class="p-8 cursor-pointer flex justify-between items-center list-none group-open:bg-premium-main/5">
+                        <span class="font-bold text-premium-charcoal text-lg">Como saber qual tratamento é ideal para mim?</span>
+                        <div class="text-premium-main group-open:rotate-180 transition-transform bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </div>
+                    </summary>
+                    <div class="p-8 pt-2 text-premium-charcoal/60 leading-relaxed text-lg">
+                        Durante a nossa primeira conversa, vou avaliar seus objetivos e as reais necessidades da sua pele ou cabelo. Juntas, vamos definir o protocolo ideal para você.
+                    </div>
+                </details>
+
+                <details class="group bg-premium-cream rounded-[2rem] overflow-hidden premium-shadow transition-all duration-300">
+                    <summary class="p-8 cursor-pointer flex justify-between items-center list-none group-open:bg-premium-main/5">
+                        <span class="font-bold text-premium-charcoal text-lg">Os procedimentos são seguros?</span>
+                        <div class="text-premium-main group-open:rotate-180 transition-transform bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </div>
+                    </summary>
+                    <div class="p-8 pt-2 text-premium-charcoal/60 leading-relaxed text-lg">
+                        Totalmente. Eu prezo pelo rigor médico em cada etapa. Uso apenas produtos de altíssima qualidade e técnicas reconhecidas mundialmente pela segurança e eficácia.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-premium-charcoal text-white pt-32 pb-12">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16 border-b border-white/5 pb-20">
+            <div class="space-y-8">
+                <img src="images/Logo_PNG_SEMFUNDO_03.png" alt="Logo Dra. Ana Beatriz" class="h-16 brightness-0 invert opacity-90">
+                <p class="text-white/40 leading-relaxed italic">"Cuidar de você é o meu maior compromisso."</p>
+                <div class="flex gap-4">
+                    <a href="https://instagram.com/dra.anabeatriznogueira" target="_blank" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-premium-main transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.355 2.618 6.778 6.98 6.978 1.28.058 1.688.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4.162 4.162 0 110-8.324 4.162 4.162 0 010 8.324zM18.406 4.406a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="space-y-8">
+                <h4 class="font-bold uppercase tracking-widest text-xs text-premium-main">Onde me encontrar</h4>
+                <div class="space-y-4 text-white/50 text-sm leading-relaxed">
+                    <p>Rua Dom Pedro II, 2668 Sala 405</p>
+                    <p>Edifício Corporativo Toledo</p>
+                    <p>Toledo - PR</p>
+                </div>
+            </div>
+            
+            <div class="space-y-8">
+                <h4 class="font-bold uppercase tracking-widest text-xs text-premium-main">Fale comigo</h4>
+                <div class="space-y-4">
+                    <a href="tel:+554530542042" class="block text-white/70 hover:text-premium-main transition-colors">(45) 3054-2042</a>
+                    <a href="https://wa.me/5545991855858" target="_blank" class="block text-white/70 hover:text-premium-main transition-colors">WhatsApp: (45) 99185-5858</a>
+                </div>
+            </div>
+            
+            <div class="flex flex-col justify-between">
+                <div class="hidden md:block"></div>
+                <a href="https://wa.me/5545991855858" target="_blank" class="bg-premium-main text-white px-10 py-5 rounded-full font-bold hover:bg-white hover:text-premium-charcoal transition-all text-center shadow-xl shadow-premium-main/20">Agendar Agora</a>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center text-[10px] text-white/20 uppercase tracking-[0.3em]">
+            <p>© 2025 Dra. Ana Beatriz Nogueira. Todos os direitos reservados.</p>
+            <p>Por <a href="https://agenciap2m.com.br" target="_blank" class="hover:text-premium-main">Agência P2M</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
